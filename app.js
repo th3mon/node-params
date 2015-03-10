@@ -1,21 +1,31 @@
 'use strict';
 
-function cli (validArgumets) {
-    var args = process.argv.slice(2);
+var
+    statements = {},
+    statement;
+
+function cli (validArgumets, config) {
+    var
+        args = process.argv.slice(2),
+        statements = {};
         
     args.forEach(processArguments);
 
     function processArguments (arg) {
         validArgumets.forEach(function processValidArguments (validArgument) {
             if ( arg === validArgument ) {
-                console.log(validArgument + ' is on');
+                statements[arg] = true;
             } 
             
             else if ( arg === 'no-' + validArgument ) {
-                console.log(validArgument + ' is off');
-            } 
+                statements[arg] = false;
+            }
         });
     }
+    
+    return statements;
 }
 
-cli(['arg1', 'arg2', 'argN']);
+statements = cli(['arg1', 'arg2', 'argN']);
+
+console.log(statements);
