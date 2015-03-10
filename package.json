@@ -14,6 +14,5 @@
   },
   "homepage": "https://github.com/th3mon/node-params",
   "dependencies": {
-    "express": "^4.12.2"
   }
 }

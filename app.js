@@ -1,10 +1,7 @@
 'use strict';
 
 var
-    express = require('express'),
-    app = express(),
     args = process.argv.slice(2),
-    argName = 'arg1',
     validArgumets = [
         'arg1',
         'arg2',
