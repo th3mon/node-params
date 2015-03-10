@@ -1,6 +1,5 @@
 'use strict';
 
-
 function cli (validArgumets) {
     var args = process.argv.slice(2);
         
@@ -8,11 +7,11 @@ function cli (validArgumets) {
 
     function processArguments (arg) {
         validArgumets.forEach(function processValidArguments (validArgument) {
-            if ( contains(arg, validArgument + '=false') ) {
+            if ( contains(arg, 'no-' + validArgument) ) {
                 console.log(validArgument + ' is off');
             }
             
-            else if ( contains(arg, validArgument + '=true') || contains(arg, validArgument) ) {
+            else if ( contains(arg, validArgument) ) {
                 console.log(validArgument + ' is on');
             } 
         });
