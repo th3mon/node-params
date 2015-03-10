@@ -4,16 +4,23 @@ var
     express = require('express'),
     app = express(),
     args = process.argv.slice(2),
-    argName = 'arg1';
+    argName = 'arg1',
+    validArgumets = [
+        'arg1',
+        'arg2',
+        'argN'
+    ];
     
 function processArguments (arg) {
-    if ( contains(arg, argName + '=false') ) {
-        console.log(argName + ' is off');
-    }
-    
-    else if ( contains(arg, argName + '=true') || contains(arg, argName) ) {
-        console.log(argName + ' is on');
-    }
+    validArgumets.forEach(function processValidArguments (validArgument) {
+        if ( contains(arg, validArgument + '=false') ) {
+            console.log(validArgument + ' is off');
+        }
+        
+        else if ( contains(arg, validArgument + '=true') || contains(arg, validArgument) ) {
+            console.log(validArgument + ' is on');
+        } 
+    });
 }
 
 function contains(str1, str2) {
