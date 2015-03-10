@@ -6,12 +6,24 @@ var
     args = process.argv.slice(2),
     argName = 'arg1';
     
-args.forEach(function(arg) {
-    if (arg.indexOf(argName + '=false') !== -1) {
+function processArguments (arg) {
+    if ( contains(arg, argName + '=false') ) {
         console.log(argName + ' is off');
     }
     
-    else if ( (arg.indexOf(argName + '=true') !== -1) || (arg.indexOf(argName) !== -1) ) {
+    else if ( contains(arg, argName + '=true') || contains(arg, argName) ) {
         console.log(argName + ' is on');
     }
-});
+}
+
+function contains(str1, str2) {
+    if (!str1 || (typeof str1 !== 'string') || !str2 || (typeof str2 !== 'string') ) {
+        return null;
+    }
+    
+    else {
+        return str1.indexOf(str2) !== -1;
+    }
+}
+
+args.forEach(processArguments);
