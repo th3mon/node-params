@@ -7,24 +7,14 @@ function cli (validArgumets) {
 
     function processArguments (arg) {
         validArgumets.forEach(function processValidArguments (validArgument) {
-            if ( contains(arg, 'no-' + validArgument) ) {
-                console.log(validArgument + ' is off');
-            }
-            
-            else if ( contains(arg, validArgument) ) {
+            if ( arg === validArgument ) {
                 console.log(validArgument + ' is on');
             } 
+            
+            else if ( arg === 'no-' + validArgument ) {
+                console.log(validArgument + ' is off');
+            } 
         });
-    }
-    
-    function contains(str1, str2) {
-        if (!str1 || (typeof str1 !== 'string') || !str2 || (typeof str2 !== 'string') ) {
-            return null;
-        }
-        
-        else {
-            return str1.indexOf(str2) !== -1;
-        }
     }
 }
 
