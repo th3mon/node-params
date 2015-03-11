@@ -1,10 +1,6 @@
 'use strict';
 
-var
-    statements = {},
-    statement;
-
-function cli (validArgumets, config) {
+function parse (validArgumets, config) {
     var
         args = process.argv.slice(2),
         statements = {};
@@ -26,6 +22,4 @@ function cli (validArgumets, config) {
     return statements;
 }
 
-statements = cli(['arg1', 'arg2', 'argN']);
-
-console.log(statements);
+module.exports = parse;
