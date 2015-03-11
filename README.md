@@ -1,22 +1,23 @@
 # simple-args
 A simple to use parser for arguments given when starting app by node.
 
-# Install
+# Install`
 
-```bash
-npm install https://github.com/th3mon/simple-args.git
-```
+## Make directory if you don't have it
 
 ```bash
 mkdir node_modules
-mkdir node_modules/simple-args
-cp index.js node_modules/simple-args/index.js
-cp package.json node_modules/simple-args/package.json
+```
+
+Then clone repo
+```bash
+cd node_modules
+git clone https://github.com/th3mon/simple-args.git
 ```
 
 # Test
 ```bash
-node example.js arg1 no-arg2
+node node_modules/simple-args/examples/exampe.js arg1 no-arg2
 ```
 
 # Example
