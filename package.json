@@ -21,6 +21,9 @@
     "url": "https://github.com/th3mon/node-params/issues"
   },
   "homepage": "https://github.com/th3mon/node-params",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.2.1",
+    "chai": "^2.1.1"
   }
 }
