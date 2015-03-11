@@ -1,5 +1,5 @@
 # simple-args
-Experimenting with parameters
+A simple to use parser for arguments given when starting app by node.
 
 # Install
 
