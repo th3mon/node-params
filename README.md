@@ -2,6 +2,11 @@
 Experimenting with parameters
 
 # Install
+
+```bash
+npm install https://github.com/th3mon/node-params.git
+```
+
 ```bash
 mkdir node_modules
 mkdir node_modules/simple-args
