@@ -4,7 +4,7 @@ Experimenting with parameters
 # Install
 
 ```bash
-npm install https://github.com/th3mon/node-params.git
+npm install https://github.com/th3mon/simple-args.git
 ```
 
 ```bash
