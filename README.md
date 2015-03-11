@@ -1,4 +1,4 @@
-# node-params
+# simple-args
 Experimenting with parameters
 
 # Install
