@@ -7,6 +7,11 @@
     "type": "git",
     "url": "https://github.com/th3mon/node-params.git"
   },
+  "keywords": [
+    "command line",
+    "cli",
+    "arguments"
+  ],
   "author": "Przemysław Szelenberger",
   "license": "Apache 2.0",
   "bugs": {
