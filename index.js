@@ -1,8 +1,11 @@
 'use strict';
 
-function parse (validArgumets, config) {
+function parse (validArgumets, testMode, mockArgs) {
     var
-        args = process.argv.slice(2),
+        args = testMode ?
+            mockArgs :
+            process.argv.slice(2),
+            
         statements = {};
         
     args.forEach(processArguments);
